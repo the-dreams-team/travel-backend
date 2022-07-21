@@ -1,4 +1,4 @@
-# travel-backend
+# Travel-backend
 
 
 // Picture of landing page 
@@ -66,10 +66,10 @@
 ## WireFrames 
 
 1. Home Page 
-![Image alt text](https://tinyurl.com/pro3home)
+![Image alt text](https://i.imgur.com/uEOz0V0.png)
 
 2. Modal
-![Image alt text](https://tinyurl.com/pro3modal)
+![Image alt text](https://i.imgur.com/eRgD3UB.png)
 
 
 
