@@ -6,16 +6,7 @@
 
 ## Objective
 
-
-
-
-
 ### This app provides weather and Flight prices for trip destinations Where a user can plan trips.
-
-
-
-
-
 
 ## User Stories 
 
