@@ -3,7 +3,9 @@ const Trip = require('.././models/trips')
 
 
 function index (req, res) {
+    
     Trip.find({}, (err, trip)=>{
+        console.log('got this far')
         if(err){
             res.status(400).json(err)
             return

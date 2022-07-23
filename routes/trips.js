@@ -4,10 +4,10 @@ const tripsController = require('../controllers/tripsController.js')
 
 
 router.get('/', tripsController.index)
-router.get('/', tripsController.tripDetails)
+router.get('/:id', tripsController.tripDetails)
 router.post('/', tripsController.createTrip)
-router.put('/', tripsController.updateTrip)
-router.delete('/', tripsController.deleteTrip)
+router.put('/:id', tripsController.updateTrip)
+router.delete('/:id', tripsController.deleteTrip)
 
 
 module.exports = router

@@ -6,6 +6,7 @@ const index = (req, res) => {
             res.status(400).json(err)
             return
         }
+        res.json(users)
     })
 }
 
@@ -13,7 +14,7 @@ const createNewUser = (req, res) => {
     User.create(req.body)
     .then((Users) => {
         User.find({}, (err, user) => {
-            res.json(Users)
+            res.json(user)
         })
     })
 }
