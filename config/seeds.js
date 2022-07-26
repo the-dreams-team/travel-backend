@@ -11,6 +11,11 @@ const trips = [
     returnDate: "Sep-3-2022",
     departureCity: "Austin",
     arrivalCity: "Atlanta",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "American Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "My honeymoon",
@@ -18,6 +23,11 @@ const trips = [
     returnDate: "Sep-31-2022",
     departureCity: "New York City",
     arrivalCity: "DC",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "Spirit Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "DisneyWorld",
@@ -25,6 +35,11 @@ const trips = [
     returnDate: "June-15-2022",
     departureCity: "Kansas City",
     arrivalCity: "Orlando",
+    ticketPrice: "400", 
+    numberPassengers: "150",
+    airlineType: "American Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "FamilyReunion",
@@ -32,6 +47,11 @@ const trips = [
     returnDate: "Aug-30-2022",
     departureCity: "Seatlle",
     arrivalCity: "Dallas",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "Southwest Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "FishingTrip",
@@ -39,6 +59,11 @@ const trips = [
     returnDate: "Aug-10-2022",
     departureCity: "San Franciso",
     arrivalCity: "Portland",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "United Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "Spring Break 2022",
@@ -46,6 +71,11 @@ const trips = [
     returnDate: "May-1-2022",
     departureCity: "Portland",
     arrivalCity: "Boston",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "American Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "Graduation",
@@ -53,6 +83,11 @@ const trips = [
     returnDate: "May-31-2022",
     departureCity: "Topeka",
     arrivalCity: "Little Rock",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "Ethiad Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "Summer Vacation",
@@ -60,6 +95,11 @@ const trips = [
     returnDate: "July-11-2022",
     departureCity: "Dallas",
     arrivalCity: "Buffalo",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "Southwest Airlines",
+    flightId: "123"
+
   },
   {
     tripName: "Memorial Weekend",
@@ -67,6 +107,11 @@ const trips = [
     returnDate: "Aug-15-2022",
     departureCity: "Boston",
     arrivalCity: "Philidelpia",
+    ticketPrice: "225", 
+    numberPassengers: "200",
+    airlineType: "Spirit Airlines",
+    flightId: "123"
+
   }
 ];
 

@@ -44,7 +44,12 @@ async function deleteTrip (req, res) {
 
 }
 async function tripDetails (req, res) {
-
+    console.log('tripdetails route pinged')
+    Trip.findById(req.params.id)
+    .then(trip => {
+        console.log(trip)
+        res.json(trip)
+    })
 }
 
 

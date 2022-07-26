@@ -35,6 +35,7 @@ function createJWT(user) {
 // }
 
 const loginUser = (req, res) => {
+  console.log('login route pinged')
   User.findOne({ email: req.body.email })
   .then(user => {
     if(!user){

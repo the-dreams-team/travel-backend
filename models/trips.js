@@ -8,6 +8,10 @@ const tripSchema = new Schema ({
     returnDate: 'String',
     departureCity: "String",
     arrivalCity: "String",
+    ticketPrice: "String", 
+    numberPassengers: "String",
+    airlineType: "String",
+    flightId: "String",
     userId: {
         type: mongoose.Types.ObjectId, 
         ref: 'User'
