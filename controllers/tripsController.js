@@ -35,12 +35,21 @@ async function updateTrip (req, res) {
 }
 
 async function deleteTrip (req, res) {  
-    try {
-    await Trip.findByIdAndDelete(req.params.id);
+    let {id} = req.params
+    Trip.findByIdAndDelete(id, (err, trip)=>{
+        if (err){
+            res.status(400).json(err)
+            return
+        } 
+        res.json({msg: 'trip deleted'})
+    })
+    
+    // try {
+    // await Trip.findByIdAndDelete(id);
 
-    }catch (err){
-        res.json({err});
-    }
+    // }catch (err){
+    //     res.json({err});
+    // }
 
 }
 async function tripDetails (req, res) {

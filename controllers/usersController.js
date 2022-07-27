@@ -20,11 +20,13 @@ const createNewUser = (req, res) => {
 }
 
 const updateUser = (req, res) => {
-    User.findByIdAndUpdate(req.params.id, req.body, (err, users) => {
+    User.findByIdAndUpdate(req.params.id, req.body, (err, user) => {
         if(err) {
             res.status(400).json
             return
         }
+        //send back the updated user info
+        res.json(user)
     })
 }
 
