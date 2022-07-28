@@ -12,6 +12,7 @@ const tripSchema = new Schema ({
     numberPassengers: "String",
     airlineType: "String",
     flightId: "String",
+    favorite: Boolean,
     userId: {
         type: mongoose.Types.ObjectId, 
         ref: 'User'

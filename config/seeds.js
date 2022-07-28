@@ -6,6 +6,7 @@ const Trip = require("../models/trips");
 
 const trips = [
   {
+    favorite: false,
     tripName: "My first trip",
     departureDate: " Sep-1-2022",
     returnDate: "Sep-3-2022",
@@ -18,6 +19,7 @@ const trips = [
 
   },
   {
+    favorite: false,
     tripName: "My honeymoon",
     departureDate: " Sep-21-2022",
     returnDate: "Sep-31-2022",
@@ -30,6 +32,7 @@ const trips = [
 
   },
   {
+    favorite: true,
     tripName: "DisneyWorld",
     departureDate: " June-06-2022",
     returnDate: "June-15-2022",
@@ -42,6 +45,7 @@ const trips = [
 
   },
   {
+    favorite: false,
     tripName: "FamilyReunion",
     departureDate: " Aug-21-2022",
     returnDate: "Aug-30-2022",
@@ -54,6 +58,7 @@ const trips = [
 
   },
   {
+    favorite: false,
     tripName: "FishingTrip",
     departureDate: "Aug-1-2022",
     returnDate: "Aug-10-2022",
@@ -66,6 +71,8 @@ const trips = [
 
   },
   {
+    favorite: false,
+
     tripName: "Spring Break 2022",
     departureDate: "Apr-21-2022",
     returnDate: "May-1-2022",
@@ -78,6 +85,8 @@ const trips = [
 
   },
   {
+    favorite: false,
+
     tripName: "Graduation",
     departureDate: "May-21-2022",
     returnDate: "May-31-2022",
@@ -90,6 +99,7 @@ const trips = [
 
   },
   {
+    favorite: false,
     tripName: "Summer Vacation",
     departureDate: "July-04-2022",
     returnDate: "July-11-2022",
@@ -102,6 +112,8 @@ const trips = [
 
   },
   {
+   
+    favorite: false,
     tripName: "Memorial Weekend",
     departureDate: "Aug-1-2022",
     returnDate: "Aug-15-2022",

@@ -18,20 +18,28 @@ function index (req, res) {
 
 async function createTrip (req,res) {
 try {
+    console.log("userid =>", typeof req.body.id, req.body);
+    req.body.userId = req.user.id;
     await Trip.create(req.body);
 
     }catch (err){
         res.json({err});
     }
+    Trip.findById(req.params.id)
+    .then(trip => res.json(trip))
 }
 
 async function updateTrip (req, res) {
+    console.log('this is the req.params.id sent with the update',req.params.id)
+    console.log("this is from the trip update route",req.body)
     try {
-    await Trip.findById.update(req.params.id, req.body);
+    await Trip.findByIdAndUpdate(req.params.id, req.body);
 
     }catch (err){
         res.json({err});
     }
+
+
 }
 
 async function deleteTrip (req, res) {  

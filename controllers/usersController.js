@@ -20,13 +20,18 @@ const createNewUser = (req, res) => {
 }
 
 const updateUser = (req, res) => {
+    console.log('update user route was pinged')
+    console.log('this is the REQ Params ->',req.params.id)
     User.findByIdAndUpdate(req.params.id, req.body, (err, user) => {
         if(err) {
+            console.log('error on update')
             res.status(400).json
             return
         }
         //send back the updated user info
-        res.json(user)
+
+        User.findById(req.params.id)
+        .then(user => res.json(user))
     })
 }
 
