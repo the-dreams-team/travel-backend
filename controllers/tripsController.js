@@ -38,6 +38,8 @@ async function updateTrip (req, res) {
     }catch (err){
         res.json({err});
     }
+    Trip.findById(req.params.id)
+    .then(trip => res.json(trip))
 
 
 }
