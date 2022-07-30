@@ -8,9 +8,10 @@ const app = express();
 //require routes
 const userRoutes = require('./routes/users');
 const tripsRoutes = require('./routes/trips');
+const apiRoutes = require('./routes/apiRoutes');
 
 //for our authentication 
-const authRoutes = require('./routes/authenticationRoutes')
+const authRoutes = require('./routes/authenticationRoutes');
 
 
 require('dotenv').config();
@@ -29,6 +30,7 @@ app.use(express.urlencoded({extended: true}));
 app.use('/user', userRoutes);
 app.use('/trips',tripsRoutes);
 app.use(authRoutes);
+app.use(apiRoutes);
 
 const port = process.env.PORT || 3020;
 
