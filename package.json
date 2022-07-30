@@ -17,8 +17,6 @@
     "url": "https://github.com/the-dreams-team/travel-backend/issues"
   },
 
-
-
   "homepage": "https://github.com/the-dreams-team/travel-backend#readme",
   "dependencies": {
     "amadeus": "^7.0.0",
