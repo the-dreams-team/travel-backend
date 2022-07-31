@@ -20,6 +20,7 @@ async function createTrip (req,res) {
 try {
     console.log("userid =>", typeof req.body.id, req.body);
     req.body.userId = req.user.id;
+    console.log(req.body);
     await Trip.create(req.body);
 
     }catch (err){

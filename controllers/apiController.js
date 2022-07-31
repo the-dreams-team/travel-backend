@@ -14,8 +14,7 @@ const findAirports = async (req, res) => {
     const response = await amadeus.client.get('/v1/reference-data/locations', {
       keyword,
       subType,
-      'page[offset]': page * 10,
-      view: 'light'  //might remove this line if it doesnt work
+      'page[offset]': page * 10
     });
     await res.json(JSON.parse(response.body));
   } catch (error) {
