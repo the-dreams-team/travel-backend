@@ -16,19 +16,14 @@ function index (req, res) {
 }
 
 
-async function createTrip (req,res) {
-try {
-    console.log("userid =>", typeof req.body.id, req.body);
-    req.body.userId = req.user.id;
-    console.log(req.body);
-    await Trip.create(req.body);
-
-    }catch (err){
-        res.json({err});
-    }
-    Trip.findById(req.params.id)
-    .then(trip => res.json(trip))
+const createTrip = (req, res) => {
+    console.log(req.body)
+    Trip.create(req.body)
+    .then(trip => {
+        res.json(trip)
+    })
 }
+
 
 async function updateTrip (req, res) {
     console.log('this is the req.params.id sent with the update',req.params.id)
@@ -55,13 +50,7 @@ async function deleteTrip (req, res) {
         res.json({msg: 'trip deleted'})
     })
     
-    // try {
-    // await Trip.findByIdAndDelete(id);
-
-    // }catch (err){
-    //     res.json({err});
-    // }
-
+   
 }
 async function tripDetails (req, res) {
     console.log('tripdetails route pinged')

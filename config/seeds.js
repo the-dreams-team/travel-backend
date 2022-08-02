@@ -147,16 +147,33 @@ const users = [
 //     console.log(insertedTrips)
 // })
 
+// User.deleteMany({})
+//   .then(() => Trip.deleteMany({}))
+//   .then(() => {
+//     return User.create([{ name: 'Jhon', email: 'jhon123@gmail.com', password: bcrypt.hashSync('1234', 10)},{ name: 'Megan', email: 'megan321@gmail.com', password: bcrypt.hashSync('12345', 10)}])
+//     .then(() => {
+//       return Trip.insertMany(trips)
+//     })
+//     .then(trips => console.log(trips))
+//   })
+//   .catch(console.error)
+//   .finally(() => {
+//     process.exit();
+//   });
+
+
 User.deleteMany({})
-  .then(() => Trip.deleteMany({}))
-  .then(() => {
-    return User.create([{ name: 'Jhon', email: 'jhon123@gmail.com', password: bcrypt.hashSync('1234', 10)},{ name: 'Megan', email: 'megan321@gmail.com', password: bcrypt.hashSync('12345', 10)}])
-    .then(() => {
-      return Trip.insertMany(trips);
-    });
-  })
-  .then(console.log)
-  .catch(console.error)
-  .finally(() => {
-    process.exit();
-  });
+.then(() => Trip.deleteMany({}))
+.then(() => {
+  return User.create({name: 'Megan', email: 'megan321@gmail.com', password: bcrypt.hashSync('12345', 10)})
+  .then(user => 
+   trips.map((trip) => ({...trip, userId: user._id }))
+  )
+  .then((trips) => Trip.insertMany(trips))
+})
+.then(console.log())
+.catch(console.error)
+.finally(() => {
+  process.exit();
+});
+
