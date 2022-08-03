@@ -3,15 +3,22 @@ const Trip = require('.././models/trips')
 
 
 function index (req, res) {
-    
-    Trip.find({}, (err, trip)=>{
-        console.log('got this far')
-        if(err){
-            res.status(400).json(err)
-            return
-        }
-        res.json(trip)
-    })
+    if(req.headers.authorization !== 'null'){
+        console.log(req.headers.authorization)
+        const userToken = req.headers.authorization;
+        const userObject = JSON.parse(atob(userToken.split('.')[1])).user;
+        console.log(userObject._id)
+        Trip.find({userId: userObject._id}, (err, trip)=>{
+            console.log('got this far')
+            if(err){
+                res.status(400).json(err)
+                return
+            }
+            res.json(trip)
+        })
+    } else {
+        res.json({msg: 'you need to log in'})
+    }
 
 }
 

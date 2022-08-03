@@ -8,6 +8,8 @@ const tripSchema = new Schema ({
     returnDate: 'String',
     departureCity: "String",
     arrivalCity: "String",
+    departureIata: "String",
+    arrivalIata: "String",
     ticketPrice: "String", 
     numberPassengers: "String",
     airlineType: "String",

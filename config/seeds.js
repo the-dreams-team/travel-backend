@@ -12,6 +12,8 @@ const trips = [
     returnDate: "Sep-3-2022",
     departureCity: "Austin",
     arrivalCity: "Atlanta",
+    departureIata: "AST",
+    arrivalIata: "ATL",
     ticketPrice: "225", 
     numberPassengers: "200",
     airlineType: "American Airlines",
