@@ -24,11 +24,22 @@ function index (req, res) {
 
 
 const createTrip = (req, res) => {
+    const userToken = req.headers.authorization;
+    const userObject = JSON.parse(atob(userToken.split('.')[1])).user;
+    let newTripId = '';
     console.log(req.body)
     Trip.create(req.body)
     .then(trip => {
-        res.json(trip)
+        newTripId = trip._id
+        Trip.findByIdAndUpdate(newTripId, {userId: userObject._id})
+        .then(trip => {
+            Trip.findById(trip._id)
+            .then(trip => res.json(trip))
+        })
     })
+    
+    
+   
 }
 
 
@@ -43,7 +54,6 @@ async function updateTrip (req, res) {
     }
     Trip.findById(req.params.id)
     .then(trip => res.json(trip))
-
 
 }
 

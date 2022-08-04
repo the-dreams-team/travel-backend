@@ -11,3 +11,9 @@ router.delete('/:id', tripsController.deleteTrip)
 
 
 module.exports = router
+
+
+
+
+
+
