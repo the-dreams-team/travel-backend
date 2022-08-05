@@ -14,6 +14,7 @@ const tripSchema = new Schema ({
     numberPassengers: "String",
     airlineType: "String",
     flightId: "String",
+    flightObj: {},
     favorite: Boolean,
     userId: {
         type: mongoose.Types.ObjectId, 
