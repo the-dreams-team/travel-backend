@@ -37,7 +37,8 @@
 2. Css
 3. React 
 4. Node JS
-5 Express 
+5. Express
+6. TailWind 
 
 
 ## Routes 
@@ -74,11 +75,23 @@
 
 
 ## WireFrames 
-
 1. Home Page 
+![Image alt text](https://i.imgur.com/JyztTZc.jpg)
+
+2. Trips Page 
+![Image alt text](https://i.imgur.com/Q8evdZM.jpg)
+
+3. create trip page
+![Image alt text](https://i.imgur.com/tu7nten.png)
+
+4. create trip page
+![Image alt text](https://i.imgur.com/iorVKD9.jpg)
+
+
+5. Home Page 
 ![Image alt text](https://i.imgur.com/uEOz0V0.png)
 
-2. Modal
+6. Modal
 ![Image alt text](https://i.imgur.com/eRgD3UB.png)
 
 
